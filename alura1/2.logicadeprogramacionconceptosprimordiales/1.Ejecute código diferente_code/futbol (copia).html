@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+ <h1> PROGRAMA - CALCULAR PUNTOS DE FUTBOL</h1>
+  <script>
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function imprimir(frase){
+        document.write(frase);
+        saltarLinea()
+    }
+    
+    var victorias = prompt ( "informe la cantidad de victorias ");
+    var empates = prompt ( "informe la cantidad de empates "); 
+    
+    puntosTotal = (victorias * 3) + empates;
+
+    imprimir ("El total de puntos del equipo es : " + puntosTotal);
+    // los comentarios simples se hacen asi en javascript sin importar estar en un html el pedazo de codigo aqui es javascript, por lo tanto los comentarios se realiza con las doble barra hacia la derecha //
+    //-- text * numero = numero (javascript nos quiere ayudar con algunas operaciones matematicas -->
+    // siendo se 
+    //"10" * 2 = 20
+    // el 10 estando en un string lo transforma en un numero y lo multiplica con el numero 2 me da un resultado de 20.
+    // "10" + 20 = 1020
+    // en cambio si 10 lo suma con 20 me devuelve una concatenacion y concatenacion es la suma de dos elementos siendo que 10 y 20 se unen
+
+  </script>

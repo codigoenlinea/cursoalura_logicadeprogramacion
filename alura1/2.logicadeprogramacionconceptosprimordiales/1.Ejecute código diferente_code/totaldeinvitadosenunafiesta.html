@@ -1,0 +1,50 @@
+<!--Nuestro amigo Jorge creó un programa simple para calcular el total de invitados de su fiesta, el programa tiene que sumar el total de invitados normales con el total de invitados VIPs. Ciertamente podría usar la calculadora, pero le pareció relevante ejercer su conocimiento para diseñar un programa. Entonces, Jorge escribió lo siguiente:-->
+<meta charset="UTF-8">
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var invitados = prompt("Número de invitados");
+    var vips = prompt("Número de invitados VIP's");
+
+    var total = invitados + vips;
+
+    imprimir("El total de invitados es " + total);
+
+</script>
+
+<!--Observa que usa la función prompt() para leer la cantidad de invitados e invitados vips, por lo tanto está realizando la concatenación de dos números leídos por el teclado, no está realizando la suma.
+
+¿Cuál de las opciones de abajo tiene el código correctamente para calcular el total de invitados?-->
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var invitados = parseInt(prompt("Número de invitados"));
+    var vips = parseInt(prompt("Número de invitados VIP's"));
+
+    var total = invitados + vips;
+
+    imprimir("El total de invitados es " + total);
+
+</script>
+<!---
+¡Correcto! Como la función prompt siempre transforma todo lo que digitamos en el formato del texto, o sea, como un string, es una buena práctica siempre convertir el valor digitado para el numero cuando nuestra intención es leer un número. Analicemos esta instrucción: var invitados = parseInt(prompt("Número de invitados"));
+
+La función prompt retorna lo que digitamos como string y ese retorno es pasado para parseInt. Y es esta función que recibe un string y la convierte en un número. Ahora, como tenemos dos números vinculados, no sucederá más una concatenación, y sí una suma.-->

@@ -1,0 +1,111 @@
+tenemos el soguiente programa
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+</script>
+
+<!---Este programa, de acuerdo con la respuesta del usuario, debe mostrar el mensaje "Puedes conducir" o "No puedes conducir". Recuerda que puede conducir solo quien tiene 18 años o más y también quien tiene una licencia de conducir.
+
+¡Altera el programa para que responda automáticamente!--->
+
+<!---Let's do it! Una de las tantas soluciones podría ser el siguiente código:-->
+
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+    if(edad >= 18) {
+        if(tieneLicencia == "S") {
+            imprimir("Puedes conducir");
+        }
+    }
+
+    if(edad < 18) {
+        imprimir("No puedes conducir");
+    }
+
+</script>
+<!----
+Observa que tenemos en el código un if dentro de otro, porque para que alguien pueda conducir, la persona además de tener que ser mayor de edad, debe tener una licencia de conducir. Sin embargo, tener menos de 18 años ya elimina la necesidad de verificar la existencia de una licencia, ya que no puede conducir.
+
+Por lo tanto, podemos mejorar nuestro código, en lugar de poner un if dentro de otro, podemos usar un && para indicar un "Y" dentro del mismo si. Nuestro código quedaría así:
+--->
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+    if((edad >= 18) && (tieneLicencia == "S")) {
+            imprimir("Puedes conducir");
+        }
+
+
+    if(edad < 18) {
+        imprimir("No puedes conducir");
+    }
+
+</script>
+
+<!--¡Podemos mejorar el código aún más! Por ejemplo, solo puede ingresar el if si ambas condiciones (tener una licencia y ser mayor de 18 años) son verdaderas. En este caso, solo hay una condición opuesta a "Puedes conducir" y es "No puedes conducir". Por lo tanto, podemos usar un else.--->
+
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+    if((edad >= 18) && (tieneLicencia == "S")) {
+            imprimir("Puedes conducir");
+        }
+
+    else {
+        imprimir("No puedes conducir");
+    }
+
+</script>
+
+<!--¡Observa que nuestro código se ha vuelto más optimizado y continúa con la misma funcionalidad!
+
+¡No te preocupes si tu respuesta no fue la misma que la mía, si tu programa funcionó, ya ganó 10! Siempre es bueno ver diferentes formas de resolver el mismo problema.-->
